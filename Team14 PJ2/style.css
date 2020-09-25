@@ -1,0 +1,192 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-color: #4577ac; /* fallback before image loads */
+}
+
+h1 {
+	text-align: left;
+	color: silver;
+
+	font-size: 30pt;
+	font-family: "Copperplate Gothic";
+	font-style: italic;
+	font-weight: bold;
+
+	border: 2px groove darkgrey;
+	width: 290px;
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+	color: #1aa3ff;
+
+	font-size: 26pt;
+	font-family: "Copperplate Gothic";
+	font-style: italic;
+	font-weight: bold;
+}
+
+p {
+	color: #1aa3ff;
+	font-family: "Copperplate Gothic";
+}
+
+#push {
+	height: 60px;
+}
+
+footer {
+	text-align: left;
+	color: #333;
+	font-family: "Times New Roman";
+	font-size: 18px;
+	padding: 8px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: white;
+
+	border-top: 2px groove darkgrey;
+	width: 100%;
+}
+
+#links {
+	float: right;
+}
+
+input {
+	color: #1aa3ff;
+	font-family: "Copperplate Gothic";
+}
+
+#menu, #controls {
+	background: rgba(255, 255, 255, 0.9);
+	margin-top: 1em;
+	padding: 1em;
+	display: inline-block;
+	border: 2px groove darkgrey;
+}
+
+#menu h2 {
+	margin-top: 0;
+}
+
+#ship-slider {
+	vertical-align: bottom;
+}
+
+.board-container {
+	display: inline-block;
+	margin: 1em;
+}
+
+.player-name {
+	text-align: center;
+	font-size: 16pt;
+	width: 100%;
+}
+
+.board {
+	/*
+		Water background, waves
+	*/
+	border-collapse: collapse;
+	background-image: linear-gradient(22deg, #1aa3ff 1%, #006bb3 20%, #1aa3ff 50%, #006bb3 70%, #1aa3ff 100%);
+}
+
+.board th, .board td {
+	width: 32px;
+	height: 32px;
+	border: 1px solid white;
+}
+
+.board th {
+	background: black;
+	color: white;
+}
+
+.board td {
+	background-image: radial-gradient(rgba(128,128,128,0.7) 28%, transparent 32%, transparent 100%);
+	position: relative;
+}
+
+
+.board td.miss {
+	/*
+		Miss shot, yellow
+	*/
+	background-image: radial-gradient(#a5a50d 28%, #f0f042 32%, #f0f042 58%, transparent 62%);
+}
+
+.board td.ship {
+	/*
+		Ship cell, grey
+	*/
+	background: radial-gradient(rgba(128,128,128,0.7) 28%, #7b9095 32%, #7b9095 100%);
+}
+.board td.hit {
+	/*
+		Shell hit ship, ship is hidden, red
+	*/
+	background-image: radial-gradient(#951d1d 28%, #c02626 32%, #c02626 58%, transparent 62%);
+}
+.board td.ship.hit {
+	/*
+		Shell hit ship cell, red & grey
+	*/
+	background-image: radial-gradient(#951d1d 28%, #c02626 32%, #c02626 58%, #7b9095 62%);
+}
+
+.board td:before {
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 100%;
+	pointer-events: none;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 35%;
+	}
+
+.shipslider {
+	height: 20%;
+	width: 20%;
+}
+
+
+/**change by T14**/ 
+/**change by T14**/ 
+.ScoreB{
+	color: #fefefe;
+	text-transform:uppercase;
+}
+/**change by T14**/
+/**change by T14**/ 
